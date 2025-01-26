@@ -11,6 +11,9 @@ class Calculator:
     def divide(self, x, y):
         return x / y
 
+    def remainder(self, x, y):
+        return x % y
+
     def power(self, x, y):
         return x ** y
 
@@ -52,7 +55,8 @@ while True:
                 print("Error: Division by zero is not allowed!")
             else:
                 result = calculator.divide(input_x, input_y)
-                print(f"{input_x} / {input_y} = {result}")
+                remainder = calculator.remainder(input_x, input_y)
+                print(f"{input_x} / {input_y} = {result} with a remainder of {remainder}")
         elif user_input == 5:
             if input_x == 0 and input_y == 0:
                 print("Error: X and Y both cannot be zero!")
